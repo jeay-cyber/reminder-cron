@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: '* * * * *'   # every 1 minute
   workflow_dispatch:        # allow manual trigger
+  push:                     # also run on every push to keep workflow active
+    branches: [ main ]
 
 jobs:
   send-reminders:
